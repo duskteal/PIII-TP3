@@ -1,3 +1,20 @@
+function volverPaginaPrincipal(){
+    window.location.href = "index.html"
+}
+document.addEventListener("DOMContentLoaded",()=>{ // Espera a cargar el contenido
+    const navPrincipal = document.getElementById("navPrincipal")
+    const botonNav = document.createElement("button")
+    botonNav.textContent = "Volver a la Página Principal"
+    botonNav.classList.add("botonNav")
+    botonNav.addEventListener("click", ()=>{
+        volverPaginaPrincipal()
+    });
+    console.log(botonNav)
+    navPrincipal.appendChild(botonNav)
+})
+
+
+
 const listadoPaginas = [
     {
         nombre: "Flexbox",
@@ -19,7 +36,7 @@ const listadoPaginas = [
 const contenedorTarjetas = document.getElementById("contenedorTarjetas")
 
 listadoPaginas.forEach(pagina => {
-    const tarjeta = document.createElement("div")
+    const tarjeta = document.createElement("button")
     tarjeta.classList.add("tarjeta")
     tarjeta.innerHTML = `
     <h1>${pagina.nombre}</h1>
