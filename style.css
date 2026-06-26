@@ -1,8 +1,12 @@
 body{
+    min-height: 100dvh;
     background-color: rgb(39, 39, 60);
     font-family: Helvetica;
     padding-left: 5px;
     padding-right: 5px;
+    display: flex;
+    
+    flex-direction: column;
 }
 
 .titulo{
@@ -19,16 +23,12 @@ main{
 }
 
 .footer{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
     border-top: 2px solid;
     padding: 10px;
     border-color:#6cf20d;
-    height: 20px;
     text-align: center;
     color: rgb(119, 163, 199);
+    margin-top: auto;
 }
 
 .botonNav{
@@ -85,4 +85,18 @@ main{
         color: #6cf20d;
         transition: 0.8s;
     }
+}
+
+.tarjetaMoto{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 30px;
+    border: 3px solid;
+    border-color: #113128;
+    border-radius: 4px;
+    background-color: #2e594cad;
+    width: 1300px;
+    height: fit-content;
+    color: #efc313;
 }
