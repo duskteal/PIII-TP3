@@ -80,7 +80,8 @@ const motocicletas = [
         motor: "Tetracilíndrico en línea",
         potencia: 202,
         estilo: "Superbike",
-        paisOrigen: "Japón"
+        paisOrigen: "Japón",
+        imagen: "suzuki.jpg"
     },
     {
         marca: "Triumph",
@@ -89,7 +90,8 @@ const motocicletas = [
         motor: "Tricilíndrico en línea",
         potencia: 120,
         estilo: "Naked",
-        paisOrigen: "Reino Unido"
+        paisOrigen: "Reino Unido",
+        imagen: "triumph.jpg"
     },
     {
         marca: "Ducati",
@@ -98,7 +100,8 @@ const motocicletas = [
         motor: "Bicilindrico en L",
         potencia: 162,
         estilo: "Muscle Cruiser",
-        paisOrigen: "Italia"
+        paisOrigen: "Italia",
+        imagen: "ducati.jpg"
     },
     {
         marca: "BMW Motorrad",
@@ -107,7 +110,8 @@ const motocicletas = [
         motor: "Bicilíndrico tipo Boxer",
         potencia: 136,
         estilo: "Adventure",
-        paisOrigen: "Alemania"
+        paisOrigen: "Alemania",
+        imagen: "bmw.jpg"
     },
     {
         marca: "Kawasaki",
@@ -116,7 +120,8 @@ const motocicletas = [
         motor: "Tetracilíndrico en línea",
         potencia: 203,
         estilo: "Superbike",
-        paisOrigen: "Japón"
+        paisOrigen: "Japón",
+        imagen: "kawasaki.jpg"
     },
     {
         marca: "Honda",
@@ -125,24 +130,56 @@ const motocicletas = [
         motor: "Monocilíndrico Unicam",
         potencia: 202,
         estilo: "Enduro",
-        paisOrigen: "Japón"
+        paisOrigen: "Japón",
+        imagen: "honda.jpg"
     }
 ];
 
+
+
+
+                
+if(contenedorMotos){
+
 const contenedorMotos = document.getElementById("contenedorMotos")
 
-if(contenedorMotos){
         motocicletas.forEach(moto =>{
             const tarjetaMoto = document.createElement("div")
             tarjetaMoto.classList.add("tarjetaMoto")
-            tarjetaMoto.innerHTML = `
-                <h2>${moto.marca} ${moto.modelo}</h2>
-                <p>Motor: ${moto.motor}</p>
-                <p>Cilindrada: ${moto.cilindrada}cc</p>
-                <p>Potencia: ${moto.potencia}CV</p>
-                <p>Estilo: ${moto.estilo}</p>
-                <p>País de orígen: ${moto.paisOrigen}</p>`
-                contenedorMotos.appendChild(tarjetaMoto)
-        }
+
+            tarjetaMoto.addEventListener("mouseenter", ()=>{
+                    tarjetaMoto.classList.add("tarjetaHover")
+                    console.log(mostrarMoto)
+                })
+                
+
+                tarjetaMoto.addEventListener("mouseleave", ()=>{
+                    tarjetaMoto.classList.remove("tarjetaHover")
+                    console.log(mostrarMoto)
+                })
+
+                document.addEventListener("DOMContentLoaded", ()=>{
+
+                tarjetaMoto.innerHTML = 
+                    `
+                    <h1 class="nombreMoto">${moto.marca} ${moto.modelo}</h1>
+                    <p>Motor: <span class="datoMoto">${moto.motor}</span></p>
+                    <p>Cilindrada: <span class="datoMoto">${moto.cilindrada}cc</span></p>
+                    <p>Potencia: <span class="datoMoto">${moto.potencia}CV</span></p>
+                    <p>Estilo: <span class="datoMoto">${moto.estilo}</span></p>
+                    <p>País de orígen: <span class="datoMoto">${moto.paisOrigen}</span></p>
+                    <img class=".motoMostrar" src="${moto.imagen}" alt="${moto.modelo}" width="60%" height="40%">
+                    `
+                    contenedorMotos.appendChild(tarjetaMoto)
+
+                    }
+                )
+                    
+            }
+
+            
+                
+                
+        
         )
 }

@@ -31,14 +31,24 @@ main{
     margin-top: auto;
 }
 
+nav{
+    border-top: 2px solid #201c28;
+    border-bottom: 2px solid #201c28;
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
 .botonNav{
     display: inline-flex;
     background-color: rgb(23, 42, 42);
     color: aquamarine;
-    margin: 10px;
+    margin-left: 40px;
     padding: 15px;
     border: 3px solid;
     border-color: rgb(11, 19, 22);
+    
 }
 
 #contenedorTarjetas{
@@ -87,16 +97,41 @@ main{
     }
 }
 
+#contenedorMotos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
 .tarjetaMoto{
     display: flex;
-    gap: 20px;
-    justify-content: space-between;
-    padding: 30px;
-    border: 3px solid;
-    border-color: #113128;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 400px;
+    height: 500px;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    border: 5px solid;
+    border-color: #327e68;
     border-radius: 4px;
     background-color: #2e594cad;
-    width: 1300px;
-    height: fit-content;
-    color: #efc313;
+    height: 350px;
+    color: #f1cc5d;
+    font-weight: bold;
+    align-items: center;
+    transition: 0.6s;
+    #nombreMoto{
+        font-weight:800;
+        color: #f07b06;
+    }
+    .datoMoto{
+        color: #c0f309;
+        font-weight: normal;
+    }
+    .motoMostrar{
+        border: 10px solid;
+    }
 }
