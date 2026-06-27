@@ -139,7 +139,7 @@ const motocicletas = [
 
 
                 
-if(contenedorMotos){
+
 
 const contenedorMotos = document.getElementById("contenedorMotos")
 
@@ -182,7 +182,7 @@ const contenedorMotos = document.getElementById("contenedorMotos")
                 
         
         )
-}
+
 
 const Personas = [];
  
@@ -197,7 +197,7 @@ const inputPeso = document.getElementById("inputPeso")
 const bodyTabla = document.getElementById("bodyTabla")
 
 function renderTabla(){
-    bodyTabla.innerHTML = "";
+    
 
     Personas.forEach(persona =>{
         const fila = document.createElement("tr")
@@ -225,7 +225,7 @@ function renderTabla(){
  
         bodyTabla.appendChild(fila)
 
-
+        bodyTabla.innerHTML = "";
     }) // fin foreach
 } // fin render
 
