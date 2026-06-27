@@ -143,6 +143,7 @@ table{
     border-width: 2px solid;
     text-align: center;
     border-color: black;
+    border: 20px;
 }
 #contenedorFormulario{
     background-color: #201c28;
