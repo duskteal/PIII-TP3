@@ -197,7 +197,7 @@ const inputPeso = document.getElementById("inputPeso")
 const bodyTabla = document.getElementById("bodyTabla")
 
 function renderTabla(){
-    
+    bodyTabla.innerHTML = "";
 
     Personas.forEach(persona =>{
         const fila = document.createElement("tr")
@@ -224,8 +224,6 @@ function renderTabla(){
         fila.appendChild(celdaPeso)
  
         bodyTabla.appendChild(fila)
-
-        bodyTabla.innerHTML = "";
     }) // fin foreach
 } // fin render
 
@@ -250,7 +248,7 @@ formularioJS.addEventListener("submit", event =>{
 //   }
 
   Personas.push({
-    nombre: valorApellido,
+    nombre: valorNombre,
     apellido: valorApellido,
     edad: Number(valorEdad),
     altura: Number(valorAltura),
