@@ -183,3 +183,80 @@ const contenedorMotos = document.getElementById("contenedorMotos")
         
         )
 }
+
+const Personas = [];
+ 
+const formularioJS = document.getElementById("formularioJS")
+
+const inputNombre = document.getElementById("inputNombre")
+const inputApellido = document.getElementById("inputApellido")
+const inputEdad = document.getElementById("inputEdad")
+const inputAltura = document.getElementById("inputAltura")
+const inputPeso = document.getElementById("inputPeso")
+
+const bodyTabla = document.getElementById("bodyTabla")
+
+function renderTabla(){
+    bodyTabla.innerHTML = "";
+
+    Personas.forEach(persona =>{
+        const fila = document.createElement("tr")
+
+        const celdaNombre = document.createElement("td");
+        celdaNombre.textContent = persona.nombre;
+
+        const celdaApellido = document.createElement("td");
+        celdaApellido.textContent = persona.apellido;
+
+        const celdaEdad = document.createElement("td");
+        celdaEdad.textContent = persona.edad;
+
+        const celdaAltura = document.createElement("td");
+        celdaAltura.textContent = persona.altura;
+
+        const celdaPeso = document.createElement("td");
+        celdaPeso.textContent = persona.peso;
+
+        fila.appendChild(celdaNombre)
+        fila.appendChild(celdaApellido)
+        fila.appendChild(celdaEdad)
+        fila.appendChild(celdaAltura)
+        fila.appendChild(celdaPeso)
+ 
+        bodyTabla.appendChild(fila)
+
+
+    }) // fin foreach
+} // fin render
+
+formularioJS.addEventListener("submit", event =>{
+    event.preventDefault();
+
+    const valorNombre = inputNombre.value.trim();
+    const valorApellido = inputApellido.value.trim();
+    const valorEdad = inputEdad.value;
+    const valorAltura = inputAltura.value;
+    const valorPeso = inputPeso.value;
+
+//     if (valorNombre === ""|| 
+//         valorApellido === "" || 
+//         valorEdad === "" || 
+//         valorEdad <= 0|| 
+//         valorAltura === "" || 
+//         valorAltura <= 0 || 
+//         valorPeso === "" || 
+//         valorPeso <= 0) {
+//     return;
+//   }
+
+  Personas.push({
+    nombre: valorApellido,
+    apellido: valorApellido,
+    edad: Number(valorEdad),
+    altura: Number(valorAltura),
+    peso: Number(valorPeso)
+  });
+
+  renderTabla();
+  formularioJS.reset();
+})

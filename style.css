@@ -135,3 +135,35 @@ nav{
         border: 10px solid;
     }
 }
+
+
+
+table{
+    background-color: #3c04ab;
+    border-width: 2px solid;
+    text-align: center;
+    border-color: black;
+}
+#contenedorFormulario{
+    background-color: #201c28;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#formularioJS{
+
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 30px;
+    gap: 15px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 30px;
+}
+input{
+    padding: 10px;
+}

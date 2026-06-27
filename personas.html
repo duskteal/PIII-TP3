@@ -12,7 +12,37 @@
         </header>
         <nav id="navPrincipal"></nav>
         <main>
-            <h1>soy personas</h1>
+            <h1 class="titulo">Calculadora de IMC</h1>
+
+            <div id="contenedorFormulario">
+                <form id="formularioJS">
+                    <input id="inputNombre" type="text" placeholder="Nombre"/>
+                    <input id="inputApellido" type="text" placeholder="Apellido"/>
+                    <input id="inputEdad" type="number" placeholder="Edad"/>
+                    <input id="inputAltura" type="number" placeholder="Altura(cm)"/>
+                    <input id="inputPeso" type="number" placeholder="Peso(kg)"/>
+                    <button type="submit">Agregar Persona</button>
+            </form>
+            </div>
+
+            <div id="contenedorTabla">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tus Datos</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bodyTabla">
+                        <hr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Edad</th>
+                            <th>Altura</th>
+                            <th>Peso</th>
+                        </hr>
+                    </tbody>
+                </table>
+            </div>
         </main>
         <footer class="footer">Enzo Mariano Goyochea - Comisión B</footer>
         <script src="script.js"></script>
